@@ -5,17 +5,29 @@
     <link rel="stylesheet" href="style.css"> </head>
 
 <body>
+<<<<<<< HEAD
     <div>Streak:
+=======
+    <div>Pontos:
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
         <div class="score">0</div>
     </div>
     <div> Record :
     	<div class="record">0</div>
     </div>
+<<<<<<< HEAD
     <div class="message">Click to Start</div>
     <div class="gameplay"></div>
     <button type="button">Start</button>
     <button type="button" class="hideButton">Higher</button>
     <button type="button" class="hideButton">Lower</button>
+=======
+    <div class="message">Clique para começar</div>
+    <div class="gameplay"></div>
+    <button type="button">Start</button>
+    <button type="button" class="hideButton">Maior</button>
+    <button type="button" class="hideButton">Menor</button>
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
     <script>
     	
         const message = document.querySelector(".message");
@@ -23,6 +35,12 @@
         const button = document.querySelectorAll("button");
         const gameplay = document.querySelector(".gameplay");
         const recorde = document.querySelector('.record');
+<<<<<<< HEAD
+=======
+      
+
+
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
         
 
 
@@ -48,13 +66,21 @@
             button[0].classList.toggle("hideButton");
             button[1].classList.toggle("hideButton");
             button[2].classList.toggle("hideButton");
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
         }
 
         function playGame(e) {
             let temp = e.target.innerText;
             let myCard = drawCard();
             if (temp == "Start") {
+<<<<<<< HEAD
                 message.innerHTML = "Higher or Lower";
+=======
+                message.innerHTML = "Maior ou Menor";
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
                 gameplay.innerHTML = "";
                 makeCard(myCard);
                 toggleButtons();
@@ -62,6 +88,7 @@
             }
           
             if(myCard.value == curCardValue){
+<<<<<<< HEAD
                 message.innerHTML = "Draw";
             }else{
                 if((temp=="Higher" && (myCard.value >curCardValue)) || (temp == "Lower" && (myCard.value<curCardValue))){
@@ -71,6 +98,15 @@
                     	alert("Awesome");
                      }
                     message.innerHTML = "Correct, Next?";
+=======
+                message.innerHTML = "Empatou";
+            }else{
+                if((temp=="Maior" && (myCard.value >curCardValue)) || (temp == "Menor" && (myCard.value<curCardValue))){
+                    scoreValue++;
+                    score.innerHTML = scoreValue;
+                    
+                    message.innerHTML = "Correto, Próximo?";
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
 	                    if(scoreValue > record)
 	                    {
 		                    record++;   
@@ -83,10 +119,19 @@
                    
                     
                 }else{
+<<<<<<< HEAD
                     message.innerHTML = "Wrong Game Over";
                     scoreValue = 0;
                     score.innerHTML = 0; /* pontuação zera ao perder o jogo   */
                     toggleButtons();
+=======
+                    message.innerHTML = "Errou! Game Over";
+                    
+                    scoreValue = 0;
+                    score.innerHTML = 0; /* pontuação zera ao perder o jogo   */
+                    toggleButtons();
+                     
+>>>>>>> 24878391251e2748ab17246e52e541fecca2a3d4
                     
                     
                 }
